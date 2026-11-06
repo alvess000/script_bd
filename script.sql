@@ -50,4 +50,29 @@ create table public.comentario(
 );
 
 
+create table public.noticia (
+  id_noticia serial primary key,
+  titulo               varchar(255) not null,
+  subtitulo            varchar(255) not null,
+  conteudo_texto       text not null,,
+  status               status_noticia_enum not null,
+  id_jornalista        bigint not null,
+  id_categoria         bigint not null,
+  data_publicação      datetime,
+  data_criação         timestamp,
+;
+
+create table public.historico_revisão(
+  id_historico serial primary key,
+  id_noticia              bigint not null,
+  id_editor               bigint not null,
+  observação_revisão      text not null,
+  status_aplicado         status_noticia_enum not null,
+  data_alteração          timestamp,
+  fk_noticia              int
+
+;
+
+
+
 
