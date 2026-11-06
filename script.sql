@@ -6,6 +6,10 @@ create table public.categoria(
 
 
 );
+
+SELECT * FROM public.categoria;
+
+
  create table public.usuario(
   id_usuario serial not null,
   nome       varchar(255) null,
@@ -17,8 +21,24 @@ create table public.categoria(
 
 
 );
+SELECT * FROM public.usuario;
 
 create table public.tag(
   id_tag serial not null,
   nome_tag      varchar(50) 
 );
+
+SELECT * FROM public.tag;
+
+
+create table public.jornalista(
+  id_jornalista serial primary key,
+  id_usuario                bigint 
+  registro_profissional     varchar(50) null,
+  biografia                 text
+  especialidade             varchar(100) null, 
+);
+
+SELECT * FROM public.jornalista;
+
+
