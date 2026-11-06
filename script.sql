@@ -2,7 +2,7 @@ create table public.categoria(
   id_categoria serial primary key,
   nome_categoria     varchar(100) null,
   descricao          varchar(255) null,
-  slug               varchar(100)
+  slug               varchar(100),
 
 
 );
