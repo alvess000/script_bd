@@ -82,5 +82,10 @@ create table public.midia_noticia(
   url_arquivo             varchar(255) not null,
   legenda                 varchar(255),
   data_upload             timestamp,
+  fk_noticia              int
+
+create table public.noticia_tag(
+  id_noticia serial primary key,
+  id_tag              bigint not null,
   fk_noticia              int,
 );
