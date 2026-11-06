@@ -17,7 +17,7 @@ SELECT * FROM public.categoria;
   senha_hash varchar(255) null,
   data_nascimento date,
   tipo_perfil varchar(255),
-  data_cadastro timestamp
+  data_cadastro timestamp,
 
 
 );
