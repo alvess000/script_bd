@@ -39,6 +39,15 @@ create table public.jornalista(
   especialidade             varchar(100) null, 
 );
 
-SELECT * FROM public.jornalista;
+
+create table public.comentario(
+  id_comentario serial primary key,
+  id_noticia                bigint,
+  id_usuario                bigint,
+  biografia                 text,
+  data_publicacao           datetime,
+  ativo                      bolean
+);
+
 
 
