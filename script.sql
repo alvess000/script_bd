@@ -89,3 +89,11 @@ create table public.noticia_tag(
   id_tag              bigint not null,
   fk_noticia              int,
 );
+create table public.curtida_noticia(
+  id_curtida serial primary key,
+  id_noticia              bigint not null,
+  id_usuario              bigint not null,
+  data_reação             timestamp,
+  fk_noticia              int,
+  fk_usuario              int,
+);
